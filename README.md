@@ -2,6 +2,10 @@
 
 > **"Don't trust one rating. See the evidence."**
 
+**[Live frontend](https://review-lens-black.vercel.app/) · [GitHub repository](https://github.com/rajsalonia/ReviewLens) · [Data-source status](#data-sources--current-operational-status) · [Local setup](#local-setup)**
+
+![React](https://img.shields.io/badge/React-TypeScript-61DAFB?logo=react&logoColor=white) ![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-blue)
+
 ReviewLens is an evidence-driven decision intelligence engine that synthesizes permitted public evidence from multiple independent sources, resolves ambiguous entities, identifies recurring and conflicting perspectives, performs multi-faceted aspect analysis, and provides traceable, auditable evidence graphs without relying on opaque rating averages.
 
 ---
@@ -72,12 +76,12 @@ ReviewLens separates evidence discovery, normalization, analysis, and presentati
 
 ## Data Sources & Current Operational Status
 
-ReviewLens strictly distinguishes between live network data and offline demonstration baselines. Sources are never labeled `LIVE` unless an active network request successfully returned valid data.
+ReviewLens distinguishes runtime network responses from offline demonstration baselines. Live status is determined by each successful request; static documentation cannot guarantee current provider availability.
 
 | Source | Category | Status | Authentication & Policy | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
-| **OpenStreetMap** | Open Data | **LIVE** | Public Overpass API (ODbL License) | Physical entity discovery, geographic coordinates, amenity tags. |
-| **Wikimedia** | Institutional | **LIVE** | Public Wikipedia REST API (CC-BY-SA 4.0) | Institutional background, founding history, encyclopedic context. |
+| **OpenStreetMap** | Open Data | **Network-backed, when reachable** | Public Overpass API (ODbL License) | Physical entity discovery, geographic coordinates, amenity tags. |
+| **Wikimedia** | Institutional | **Network-backed, when reachable** | Public Wikipedia REST API (CC-BY-SA 4.0) | Institutional background, founding history, encyclopedic context. |
 | **Google Places** | Official Business | **Requires Credentials** | Google Places Platform (`GOOGLE_PLACES_API_KEY`) | Official Place IDs, verified business metadata, address verification. |
 | **Reddit** | Public Discussion | **Requires Credentials** | Official OAuth 2.0 (`REDDIT_CLIENT_ID`, `SECRET`) | Public community discussions and student/consumer feedback. |
 | **Web Search** | Search Result | **Requires Provider** | SearXNG / Custom Endpoint (`WEB_SEARCH_ENDPOINT`) | Public web documents and index overviews. |
@@ -278,3 +282,13 @@ ReviewLens enforces strict data transparency:
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Portfolio & Demo Links
+
+- **Live frontend:** https://review-lens-black.vercel.app/
+- **Repository:** https://github.com/rajsalonia/ReviewLens
+- **Documentation:** [Data sources](DATA_SOURCES.md) · [Evaluation](EVALUATION.md) · [Model card](MODEL_CARD.md)
+
+> **Demo limitations:** External providers such as Reddit and Google Places require your own credentials. Offline archive results must remain visibly differentiated from externally retrieved evidence. The hosted frontend's availability is not a guarantee that every backend connector is configured.
