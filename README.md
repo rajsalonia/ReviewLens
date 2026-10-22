@@ -2,6 +2,10 @@
 
 > **"Don't trust one rating. See the evidence."**
 
+[Repository](https://github.com/rajsalonia/ReviewLens) · [Deployment URL](https://review-lens-black.vercel.app/) (availability not independently verified)
+
+**Intended users:** researchers and people comparing evidence about institutions, places, and other real-world entities. **Engineering focus:** FastAPI connector orchestration, source provenance, entity resolution, React/TypeScript UI, and explicit distinction between live sources and offline archives.
+
 ReviewLens is an evidence-driven decision intelligence engine that synthesizes permitted public evidence from multiple independent sources, resolves ambiguous entities, identifies recurring and conflicting perspectives, performs multi-faceted aspect analysis, and provides traceable, auditable evidence graphs without relying on opaque rating averages.
 
 ---
@@ -169,7 +173,7 @@ ReviewLens/
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/rajsalonia/ReviewLens.git
 cd ReviewLens
 ```
 
@@ -227,6 +231,9 @@ cp .env.example .env
 ---
 
 ## Testing
+
+The following are repository-provided commands; the audit did not execute them or verify a live deployment.
+
 
 ### Run Backend Tests
 ReviewLens includes a comprehensive pytest suite covering entity resolution, contradiction detection, connector error isolation, and serialization contracts:
