@@ -2,7 +2,7 @@
 
 > **"Don't trust one rating. See the evidence."**
 
-**[Live frontend](https://review-lens-black.vercel.app/) · [GitHub repository](https://github.com/rajsalonia/ReviewLens) · [Data-source status](#data-sources--current-operational-status) · [Local setup](#local-setup)**
+**[Live frontend](https://review-lens-black.vercel.app/) · [GitHub repository](https://github.com/rajsalonia/ReviewLens) · [Data-source status](#data-sources--current-operational-status) · [Local setup](#local-setup) · [Contributing](CONTRIBUTING.md)**
 
 ![React](https://img.shields.io/badge/React-TypeScript-61DAFB?logo=react&logoColor=white) ![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-blue)
 
